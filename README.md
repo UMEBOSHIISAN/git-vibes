@@ -20,6 +20,10 @@ git運用にちょっとした遊び心を足す、小さい2つのツール。
 
 ## stamp — コミットスタンプ
 
+<p align="center">
+  <img src="assets/demo.gif" alt="git-vibes commit stamp demo" width="650">
+</p>
+
 ```bash
 git clone https://github.com/UMEBOSHIISAN/git-vibes.git
 cd <対象リポジトリ>
