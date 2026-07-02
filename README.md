@@ -1,4 +1,13 @@
-# git-vibes
+<p align="center">
+  <img src="assets/logo.svg" alt="git-vibes" width="720">
+</p>
+
+<p align="center">
+  <img alt="language" src="https://img.shields.io/badge/language-Python%203-6FE0A0">
+  <img alt="hook" src="https://img.shields.io/badge/hook-pre--commit-8FE7FF">
+  <img alt="license" src="https://img.shields.io/badge/license-MIT-FFD24D">
+  <img alt="scope" src="https://img.shields.io/badge/scope-non--blocking-6E8FE0">
+</p>
 
 git運用にちょっとした遊び心を足す、小さい2つのツール。
 
@@ -12,18 +21,19 @@ git運用にちょっとした遊び心を足す、小さい2つのツール。
 ## stamp — コミットスタンプ
 
 ```bash
+git clone https://github.com/UMEBOSHIISAN/git-vibes.git
 cd <対象リポジトリ>
-~/Workspace/遊び枠/git-vibes/install.sh
+/path/to/git-vibes/install.sh
 git commit -m "test"   # コミットのたびにドット絵が出る
 ```
 
 `invader` `ufo` `heart` `star` `rocket` `mushroom` の6種からランダムに1つ表示。
-稀に(8%)金色のレア版が出る（m5-agent-starsの育成要素と同じ仕掛け）。
+稀に(8%)金色のレア版が出る（[m5-agent-stars](https://github.com/UMEBOSHIISAN/m5-agent-stars)の育成要素と同じ仕掛け）。
 
 単体で試すだけなら:
 
 ```bash
-python3 ~/Workspace/遊び枠/git-vibes/stamp.py
+python3 /path/to/git-vibes/stamp.py
 ```
 
 ---
@@ -33,7 +43,7 @@ python3 ~/Workspace/遊び枠/git-vibes/stamp.py
 対象リポジトリのルートで実行:
 
 ```bash
-python3 ~/Workspace/遊び枠/git-vibes/fortune.py
+python3 /path/to/git-vibes/fortune.py
 ```
 
 直近7日のコミット数・深夜コミット率を見て、コメントとラッキーアイテム/カラーを表示する。
@@ -63,6 +73,8 @@ git-vibes/
 ├── stamp.py       # ドット絵スタンプ本体
 ├── fortune.py     # 開発運勢占い本体
 ├── install.sh     # 対象リポジトリにpre-commitフックを設置
+├── assets/
+│   └── logo.svg
 └── README.md
 ```
 
@@ -73,6 +85,13 @@ git-vibes/
 - コミットの中身は一切検査しない（lintでもテストランナーでもない）
 - 生産性の評価・強制には使わない。コミット数が多い/少ないの優劣判定はしない
 - fortuneの結果はエンタメ。意思決定材料にしない
+
+---
+
+## 関連プロジェクト
+
+- [m5-agent-stars](https://github.com/UMEBOSHIISAN/m5-agent-stars) — 同じドット絵・レア演出をM5StickC Plus実機でやるプロジェクト
+- [chiptune-notify](https://github.com/UMEBOSHIISAN/chiptune-notify) — 同系統のチップチューン音源ライブラリ
 
 ---
 
