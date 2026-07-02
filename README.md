@@ -75,16 +75,21 @@ git-vibes/
 ├── install.sh     # 対象リポジトリにpre-commitフックを設置
 ├── assets/
 │   └── logo.svg
-└── README.md
+├── README.md
+└── CHANGELOG.md
 ```
 
 ---
 
-## スコープ外
+## ⚠️ Safety / Scope
 
+**git-vibesはコミットを妨げません。品質ゲートでもCIチェックでもありません。**
+
+- `stamp.py`/`fortune.py`はどちらも例外を握りつぶして`exit 0`で終わる。コミットをブロックする条件は存在しない
 - コミットの中身は一切検査しない（lintでもテストランナーでもない）
 - 生産性の評価・強制には使わない。コミット数が多い/少ないの優劣判定はしない
 - fortuneの結果はエンタメ。意思決定材料にしない
+- `install.sh`は`.git/hooks/pre-commit`を上書きする。既存フックがある場合はバックアップを取ってから上書きするか確認される
 
 ---
 
